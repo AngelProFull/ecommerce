@@ -1,7 +1,15 @@
 package com.aplication.ecommerce.model;
 
+import jakarta.persistence.*;
+
+import java.util.List;
+
+@Entity
+@Table(name="usuarios")
 public class Usuario {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nombre;
     private String username;
@@ -11,6 +19,16 @@ public class Usuario {
     //Admin o User.
     private String tipo;
     private String password;
+
+//Usuario necesita una lista de productos. Y tiene una relación uno a muchos.
+    //y está mapeada a usuario(De la clase Producto)
+
+    @OneToMany(mappedBy = "usuario")
+    private List<Producto> listaproductos;
+    //Un usuario puede tener muchas ordenes.
+    //Mapeo a usuario.
+    @OneToMany
+    private List<Orden> listaordenes;
 
     public Usuario(Integer id) {
         this.id = id;
@@ -89,6 +107,14 @@ public class Usuario {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<Producto> getListaproductos() {
+        return listaproductos;
+    }
+
+    public void setListaproductos(List<Producto> listaproductos) {
+        this.listaproductos = listaproductos;
     }
 
     @Override
