@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Tienda - Página de Inicio</title>
+
+    <!-- Enlace a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Estilos CSS personalizados -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<!-- Barra de Navegación -->
+<div th:include="administrador/template.admin.html::header"></div>
+
+<!-- Encabezado -->
+<header class="py-5 text-center">
+    <div class="container">
+        <h1 class="display-4">Bienvenido a Tu Tienda</h1>
+        <p class="lead">La mejor selección de productos para ti</p>
+        <a href="/productos" class="btn btn-primary btn-lg">Explorar Productos</a>
+    </div>
+</header>
+
+<!-- Sección de Características -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Tarjeta 1 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="/images/product1.jpg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre Producto</h5>
+                        <button class="btn btn-primary btn-block">Agregar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="/images/product2.jpg" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre Producto</h5>
+                        <button class="btn btn-primary btn-block">Agregar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="/images/product3.jpg" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre Producto</h5>
+                        <button class="btn btn-primary btn-block">Agregar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 4 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="/images/product4.jpg" class="card-img-top" alt="Producto 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre Producto</h5>
+                        <button class="btn btn-primary btn-block">Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Pie de Página -->
+<div th:include="administrador/template.admin.html::footer"></div>
+
+<!-- Enlaces a los archivos JavaScript de Bootstrap y jQuery (necesarios para algunos componentes) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

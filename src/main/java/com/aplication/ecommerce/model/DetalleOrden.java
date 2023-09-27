@@ -17,9 +17,9 @@ public class DetalleOrden {
     @OneToOne
     private Orden orden;
 
-    //Creamos un atributo de tipo Producto ya que el Detalle va a llevar Productos.
+    //Creamos un atributo de tipo Producto ya que el Detalle Orden puede contener muchos productos.
 
-    @OneToOne
+    @ManyToOne
     private Producto producto;
 
     public DetalleOrden(Integer id) {

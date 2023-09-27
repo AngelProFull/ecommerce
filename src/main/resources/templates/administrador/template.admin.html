@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Tienda - Página de Inicio</title>
+
+  <!-- Enlace a Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Estilos CSS personalizados -->
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<!-- Barra de Navegación , vamos a llamar a la barra en otros archivos html, para ello creamos un div th:fragment="header"-->
+<div th:fragment="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Tu Tienda</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Productos</a>
+        </li>
+      </ul>
+      <!-- Campo de Búsqueda -->
+      <form class="form-inline ml-auto">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+      <!-- Menú Desplegable "Carrito" -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="carritoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Carrito
+          </a>
+          <div class="dropdown-menu" aria-labelledby="carritoDropdown">
+            <!-- Agrega elementos del carrito aquí -->
+            <a class="dropdown-item" href="#">Producto 1</a>
+            <a class="dropdown-item" href="#">Producto 2</a>
+          </div>
+        </li>
+      </ul>
+      <!-- Menú Desplegable "Iniciar Sesión" -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Iniciar Sesión
+          </a>
+          <div class="dropdown-menu" aria-labelledby="loginDropdown">
+            <!-- Agrega opciones de inicio de sesión aquí -->
+            <a class="dropdown-item" href="#">Iniciar sesión</a>
+            <a class="dropdown-item" href="#">Registrarse</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+</div>
+
+
+<!-- Pie de Página -->
+<div th:fragment="footer">
+  <footer class="bg-dark text-light text-center py-3">
+    <p>&copy; 2023 Tu Tienda. Todos los derechos reservados.</p>
+  </footer>
+
+</div>
+
+
+<!-- Enlaces a los archivos JavaScript de Bootstrap y jQuery (necesarios para algunos componentes) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
