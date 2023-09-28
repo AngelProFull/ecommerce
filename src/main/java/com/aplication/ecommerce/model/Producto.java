@@ -19,6 +19,9 @@ public class Producto {
     @ManyToOne
     private Usuario usuario;
 
+    public Producto() {
+    }
+
     public Producto(Integer id) {
         this.id = id;
     }

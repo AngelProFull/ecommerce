@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Productos</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<!-- Barra de Navegación -->
+<div th:include="administrador/template.admin.html::header"></div>
+<div class="container mt-5">
+    <h1>Lista de Productos</h1>
+    <!-- Botón para crear un nuevo producto -->
+    <a th:href="@{/productos/crear}" class="btn btn-primary mb-3">Crear Producto</a>
+    <!-- Tabla para mostrar los productos -->
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Inventario</th>
+            <th>Precio</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Filas de productos (puedes repetir esto para cada producto) -->
+        <tr>
+            <td>Producto 1</td>
+            <td>Descripción del Producto 1</td>
+            <td>10</td>
+            <td>$19.99</td>
+            <td>
+                <!-- Botón de editar -->
+                <a href="#" class="btn btn-warning btn-sm">Editar</a>
+            </td>
+            <td>
+                <!-- Botón de eliminar -->
+                <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+            </td>
+        </tr>
+        <!-- Repite esta fila para más productos -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Pie de Página -->
+<div th:include="administrador/template.admin.html::footer"></div>
+<!-- Enlaces a los archivos JavaScript de Bootstrap y jQuery (si es necesario) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

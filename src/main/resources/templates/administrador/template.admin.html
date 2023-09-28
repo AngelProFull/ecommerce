@@ -15,8 +15,8 @@
 
 <!-- Barra de Navegación , vamos a llamar a la barra en otros archivos html, para ello creamos un div th:fragment="header"-->
 <div th:fragment="header">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Tu Tienda</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" th:href="@{/administrador}">Tu Tienda</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -51,12 +51,12 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Iniciar Sesión
+           ADMIN
           </a>
           <div class="dropdown-menu" aria-labelledby="loginDropdown">
-            <!-- Agrega opciones de inicio de sesión aquí -->
-            <a class="dropdown-item" href="#">Iniciar sesión</a>
-            <a class="dropdown-item" href="#">Registrarse</a>
+
+
+            <a class="dropdown-item" th:href="@{/productos}">Productos</a>
           </div>
         </li>
       </ul>
