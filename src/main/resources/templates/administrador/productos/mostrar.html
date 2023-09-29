@@ -30,18 +30,19 @@
         </thead>
         <tbody>
         <!-- Filas de productos (puedes repetir esto para cada producto) -->
-        <tr>
-            <td>Producto 1</td>
-            <td>Descripción del Producto 1</td>
-            <td>10</td>
-            <td>$19.99</td>
+        <tr th:each="pvariable:${listaproductos}">
+            <td th:text="${pvariable.nombre}"></td>
+            <td th:text="${pvariable.descripcion}"></td>
+            <td th:text="${pvariable.cantidad}"></td>
+            <td th:text="${pvariable.precio}"></td>
             <td>
                 <!-- Botón de editar -->
-                <a href="#" class="btn btn-warning btn-sm">Editar</a>
+                <a th:href="@{/productos/editar/{id} (id=${pvariable.id})}" class="btn btn-warning btn-sm">Editar</a>
             </td>
             <td>
                 <!-- Botón de eliminar -->
-                <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+                <a th:href="@{/productos/eliminar/{id}(id=${pvariable.id})}" class="btn btn-danger btn-sm" >Eliminar</a>
+
             </td>
         </tr>
         <!-- Repite esta fila para más productos -->

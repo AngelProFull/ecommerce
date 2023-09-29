@@ -30,6 +30,9 @@ public class Usuario {
     @OneToMany
     private List<Orden> listaordenes;
 
+    public Usuario() {
+    }
+
     public Usuario(Integer id) {
         this.id = id;
     }
